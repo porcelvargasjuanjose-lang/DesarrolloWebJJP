@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario con Flex</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      border-radius: 10px;
+      overflow: hidden;
+      width: 800px;
+      margin: 20px auto;
+      border: 1px solid #ccc;
+    }
+
+    
+    .header {
+      display: flex;
+      align-items: center;
+      background-color: #008060;
+      color: white;
+      padding: 20px;
+    }
+
+    .logo {
+      width: 50px;
+      height: 50px;
+      background-color: white;
+      margin-right: 15px;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+   
+    .content {
+      display: flex;
+    }
+
+    .sidebar {
+      background-color: #d6f2d6;
+      padding: 20px;
+      width: 30%;
+    }
+
+    .sidebar p {
+      margin: 10px 0;
+    }
+
+    .form-section {
+      background-color: #fffacd;
+      flex: 1;
+      padding: 20px;
+    }
+
+    .form-section h2 {
+      margin-bottom: 20px;
+      color: #008060;
+    }
+
+    
+    .form-group {
+      display: flex;
+      margin-bottom: 15px;
+      align-items: center;
+    }
+
+    .form-group label {
+      width: 150px;
+      font-weight: bold;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      flex: 1;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+    textarea {
+      height: 80px;
+    }
+
+    .btn {
+      background-color: #008060;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: #006c50;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+  
+    <div class="header">
+      <div class="logo"></div>
+      <h1>Website Name</h1>
+    </div>
+
+   
+    <div class="content">
+      
+      <div class="sidebar">
+        <p>Inicio</p>
+        <p>Formulario</p>
+        <p>Acerca de</p>
+      </div>
+
+    
+      <div class="form-section">
+        <h2>Contáctanos</h2>
+        <form>
+          <div class="form-group">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" >
+          </div>
+          <div class="form-group">
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" >
+          </div>
+          <div class="form-group">
+            <label for="sitio">Sitio web:</label>
+            <input type="url" id="sitio" >
+          </div>
+          <div class="form-group">
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje"></textarea>
+          </div>
+          <button class="btn" type="button">Registrar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
